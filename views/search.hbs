@@ -4,30 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Search</title>
-    <style>form { margin-bottom: 20px; }       body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin:
-      0; padding: 20px; } h1 { text-align: center; color: #333; } #jobListings {
-      display: flex; flex-wrap: wrap; justify-content: space-around; } .job-card {
-    width: calc(20% - 20px); /* Adjust width to occupy 1/5 of the container with some margin */
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    cursor: pointer; /* Set cursor style to pointer */
-}
-
-.job-card:hover {
-    transform: scale(1.05);
-    background-color: #f9f9f9;
-} .job-card h2 { color: #333; }
-      .job-card p { color: #666; margin: 5px 0; overflow: hidden; text-overflow:
-      ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:
-      vertical; } .job-card a { color: #3498db; text-decoration: none; }
-      .job-card a:hover { text-decoration: underline; } .read-more { color:
-      #3498db; cursor: pointer; } .read-more:hover { text-decoration: underline;
-      }
+    <style>
+      form { margin-bottom: 20px; } body { font-family: Arial, sans-serif;
+      background-color: #f4f4f4; margin: 0; padding: 20px; } h1 { text-align:
+      center; color: #333; } #jobListings { display: flex; flex-wrap: wrap;
+      justify-content: space-around; } .job-card { width: calc(20% - 20px); /*
+      Adjust width to occupy 1/5 of the container with some margin */ border:
+      1px solid #ddd; padding: 10px; margin: 10px; border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #fff;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      cursor: pointer; /* Set cursor style to pointer */ } .job-card:hover {
+      transform: scale(1.05); background-color: #f9f9f9; } .job-card h2 { color:
+      #333; } .job-card p { color: #666; margin: 5px 0; overflow: hidden;
+      text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; } .job-card a { color: #3498db;
+      text-decoration: none; } .job-card a:hover { text-decoration: underline; }
+      .read-more { color: #3498db; cursor: pointer; } .read-more:hover {
+      text-decoration: underline; }
     </style>
   </head>
 
@@ -48,7 +41,7 @@
       <h2>Search Results</h2>
       <div id="jobListings">
         {{#each jobs}}
-          <div class="job-card" onclick="redirectToJob('{{url}}')">
+          <div class="job-card" onclick="redirectToJob('{{redirect_url}}')">
             <h2>{{title}}</h2>
             <p>{{company.display_name}}</p>
             <p>{{location.display_name}}</p>
@@ -59,11 +52,13 @@
       </div>
     {{/if}}
     <script>
-      function redirectToJob(url) { // Use JavaScript to open the specified URL
-      in a new window var newWindow = window.open(url, '_blank'); if (newWindow)
-      { newWindow.focus(); // Ensure the new window gets focus } else { //
-      Handle cases where the pop-up was blocked alert('Pop-up blocked. Please
-      check your browser settings.'); } }
+      function redirectToJob(url) { 
+        var newWindow = window.open(url, '_blank');
+      if (newWindow) { 
+        newWindow.focus(); 
+        } else { 
+            alert('Pop-up blocked.Pleasecheck your browser settings.'); 
+            } }
     </script>
   </body>
 
