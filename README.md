@@ -45,8 +45,8 @@ The app will be accessible at http://localhost:3000.
 * 👉 User Authentication: Implement user authentication to allow users to save favorite jobs, apply filters, and personalize their experience.
 * 👉 Job Categories and Filters: Expand the filtering options to allow users to browse jobs by categories, companies, or other relevant filters.
 * 👉 Job Details: Provide detailed job descriptions and additional information about each job posting.
-* 👉 Responsive Design: Ensure the web app is fully responsive for a seamless experience on various devices.`<br>`
-* 👉 Job Application Integration: Explore integration with job application platforms to allow users to apply for jobs directly through the app.`<br>`
+* 👉 Responsive Design: Ensure the web app is fully responsive for a seamless experience on various devices.
+* 👉 Job Application Integration: Explore integration with job application platforms to allow users to apply for jobs directly through the app.
 
 ## Contributions
 
